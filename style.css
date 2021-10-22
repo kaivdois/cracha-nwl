@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  /* margin 0 é um truque para n ter erros nas bordas e deixar mais centrado */
+}
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --grey: hsl(240, 9%, 89%);
+  /* é pra tudo que n for especifico ter essas cores */
+
+  height: 100%;
+  font-family: 'roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  /* roboto é a letra usada e webkit fot smoothing e sans serif e antialiased
+  é usado pra deixar mais bonita as letras */
+}
+body {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: url(images/background.svg);
+  width: 375px;
+  height: 812px;
+}
+
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  /* container é como se fosse a caixa de imagens aonde vai as outras */
+
+  color: var(--grey);
+}
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  position: relative;
+  /* 10 rem e 11.5rem é relativo ao tamanho do formato do container */
+}
+
+.avatar span {
+  position: absolute;
+  /* absolute é usado pra deixar a imagem centrada */
+  top: -15px;
+  /* -15 no caso é pra subir a imagem */
+  z-index: 1;
+  /* z-index é usado pra a imagem sobresair a outra imagem */
+}
+
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  /* formato hexagonal ou outro é usado clip path polygon */
+}
+h1 {
+  font-size: 1.5rem;
+  /* tamanho da fonte em toda html */
+}
+
+a {
+  color: var(--grey);
+  /* A* cor dos formatos e letras usados em icones */
+  text-decoration: none;
+  margin-top: 0.25rem;
+  /* distanciamento das margem entre as letras */
+  display: flex;
+  gap: 0.75rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 2rem;
+  /* P* é usado para textos */
+}
+
+ul {
+  margin-top: 4rem;
+  /* Ul* letras e icones dos links */
+  list-style: none;
+  padding: 0;
+  display: flex;
+  /* deixa em lado a lado paralelo os icones */
+  gap: 0.5rem;
+  justify-content: center;
+  /* espaçamento entre os icones e centraliza*/
+}
